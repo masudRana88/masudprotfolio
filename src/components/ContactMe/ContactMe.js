@@ -14,6 +14,7 @@ const ContactMe = () => {
       .then((result) => {
           if (result.text === "OK") {
               document.getElementById('sentEmail').click()
+              document.getElementById("contactForm").reset();
               console.log(result.text)
           }
       }, (error) => {
@@ -29,7 +30,7 @@ const ContactMe = () => {
                     </Col>
                     <Col sm={12} md={6} lg={6}>
                         <strong className="fs-4">Contact Me_</strong>
-                        <form ref={form} onSubmit={sendEmail}>
+                        <form ref={form} onSubmit={sendEmail} id="contactForm">
                             <div className="mt-2">
                                 <label for="exampleSubject" class="form-label mt-1">Name</label>
                                 <input type="text" class="form-control" id="exampleSubject" aria-describedby="emailHelp" placeholder="Entear Your Name" name="user_name"/>
@@ -54,7 +55,7 @@ const ContactMe = () => {
   <div class="modal-dialog" role="document" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-content">
       <div class="modal-body">
-        <p>Your Email </p>
+        <p>Your Email is successfully Send</p>
       </div>
       <div class="pb-2 pe-2 text-end">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
