@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import "./bootstrapCostomaze.css"
+import "./bootstrapQuartz.css"
 import 'aos/dist/aos.css';
 
 ReactDOM.render(

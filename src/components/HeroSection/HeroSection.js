@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react';
 import { Col, Container, ListGroup, ListGroupItem, Row, Table } from 'react-bootstrap';
+import Typewriter from 'typewriter-effect';
 import mahim from "../../Images/mahim.jpg"
 import Aos from 'aos';
 import mahimResume from "../../Files/Masud_Resume.pdf"
+import "./HeroSection.css"
 
 
 const HeroSection = () => {
@@ -16,14 +18,22 @@ const HeroSection = () => {
                     <div data-aos="fade-right" class="card text-white bg-secondary mb-3" style={{maxWidth:"25rem"}}>
                         
                         <div class="card-body">
-                            <img src={mahim} alt="" className="img-fluid rounded" />
+                            <div className="">
+                                <img src={mahim} alt="" className="img-fluid rounded" />
+                            </div>
                         </div>
                     </div>
                 </Col>
                 <Col data-aos="fade-left" md={6} lg={6} sm={12}>
                     <div className="personal-details-header">
                         <h2>Masud Rana_</h2>
-                        <h6>JavaScript Developer | Front-end Developer_</h6>
+                        <h6><Typewriter
+                            options={{
+                                strings: ['JavaScript Developer', 'Front-end Developer'],
+                                autoStart: true,
+                                loop: true,
+                            }}
+                            /></h6>
                     </div>
                     <div className="personal-details-body">
                         <Row>

@@ -7,7 +7,7 @@ const NavBar = () => {
         <header>
             <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
-                    <Navbar.Brand href="#">Masud Rana</Navbar.Brand>
+                    <Navbar.Brand href="/home">Masud Rana</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -15,7 +15,7 @@ const NavBar = () => {
                         style={{ maxHeight: '100%' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#hello">HELLO </Nav.Link>
+                        <Nav.Link href="#hello">ABOUT ME</Nav.Link>
                         <Nav.Link href={mahimResume}>RESUME</Nav.Link>
                         <Nav.Link href="#protfoio">PROTFOIO</Nav.Link>
                         <Nav.Link href="#contact">CONTACT</Nav.Link>

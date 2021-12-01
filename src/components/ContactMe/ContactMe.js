@@ -1,8 +1,9 @@
 import Button from '@restart/ui/esm/Button';
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import contact from "../../Images/contact.svg"
 import emailjs from 'emailjs-com'
+import Aos from 'aos';
 
 const ContactMe = () => {
     const form = useRef();
@@ -20,28 +21,31 @@ const ContactMe = () => {
       }, (error) => {
           console.log(error.text);
       });
-  }
+    }
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    },[])
     return (
         <Container id="contact">
             <div data-aos="fade-up" class="alert alert-dismissible alert-primary mt-3">
                 <Row>
                     <Col sm={12} md={6} lg={6}>
-                        <img src={contact} alt="" className="img-fluid" />
+                        <img data-aos="fade-down-right" src={contact} alt="" className="img-fluid" />
                     </Col>
                     <Col sm={12} md={6} lg={6}>
                         <strong className="fs-4">Contact Me_</strong>
                         <form ref={form} onSubmit={sendEmail} id="contactForm">
-                            <div className="mt-2">
+                            <div data-aos="zoom-in-left" className="mt-2">
                                 <label for="exampleSubject" class="form-label mt-1">Name</label>
                                 <input type="text" class="form-control" id="exampleSubject" aria-describedby="emailHelp" placeholder="Entear Your Name" name="user_name"/>
                             </div>
 
-                            <div class="">
+                            <div data-aos="zoom-in-right" class="">
                                 <label for="exampleInputEmail1" class="form-label mt-1">Email address</label>
                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="user_email"/>
                             </div>
                             
-                            <div class="">
+                            <div data-aos="zoom-in-left" class="">
                                 <label for="exampleTextarea" class="form-label mt-2">Example textarea</label>
                                 <textarea class="form-control" id="exampleTextarea" rows="3"placeholder="Enter Your Message" name="message"></textarea>
                             </div>
