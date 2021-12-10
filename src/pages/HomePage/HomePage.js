@@ -17,13 +17,13 @@ const HomePage = () => {
     return (
         <div>
             <NavBar />
-            <main className="mt-2">
+            <div className="mt-2">
                 <HeroSection />
                 <HelloWord />
                 <Education />
                 <Projects projects={projects} />
                 <ContactMe/>
-            </main>
+            </div>
             <Footer/>
         </div>
     );

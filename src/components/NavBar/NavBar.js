@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavHashLink, HashLink  } from 'react-router-hash-link';
 import mahimResume from "../../Files/Masud_Resume.pdf"
 
 const NavBar = () => {
     return (
-        <header>
+        <div>
             <Navbar bg="primary" variant="dark" expand="lg" collapseOnSelect>
                 <Container>
                     <Navbar.Brand href="/home">Masud Rana</Navbar.Brand>
@@ -15,15 +16,15 @@ const NavBar = () => {
                         style={{ maxHeight: '100%' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#hello">ABOUT ME</Nav.Link>
+                        <HashLink className="nav-link" to="/home#hello">ABOUT ME</HashLink>
                         <Nav.Link href={mahimResume}>RESUME</Nav.Link>
-                        <Nav.Link href="#protfoio">PROTFOIO</Nav.Link>
-                        <Nav.Link href="#contact">CONTACT</Nav.Link>
+                        <HashLink className="nav-link" to="/home#protfoio">PROTFOIO</HashLink>
+                        <HashLink className="nav-link" to="/home#contact">CONTACT</HashLink>
                     </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </header>
+        </div>
     );
 };
 

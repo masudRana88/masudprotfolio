@@ -11,7 +11,7 @@ const HelloWord = () => {
             <div  class="alert alert-dismissible alert-primary">
                 <strong className="fs-5">Hi..</strong>
                 <p>
-                    I am MERN stack developer able to build a Web presence from the ground up.
+                    I am MERN stack developer able to build a Web presence from the ground up.I am in this field since 2020. I know many technologies including javaScript, React, Node js, MongoDB. I love to work as frontend developer.
                 </p>
             </div>
         </Container>
