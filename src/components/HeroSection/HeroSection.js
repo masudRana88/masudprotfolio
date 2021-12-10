@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Col, Container, ListGroup, ListGroupItem, Row, Table } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
-import mahim from "../../Images/mahim.jpg"
+import mahim from "../../Images/mahim2.jpg"
 import Aos from 'aos';
 import mahimResume from "../../Files/Masud_Resume.pdf"
 import "./HeroSection.css"

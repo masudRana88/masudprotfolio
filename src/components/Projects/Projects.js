@@ -23,7 +23,8 @@ const Projects = ({ projects }) => {
                         <p>Overview :
                             {project.Overview}
                         </p>
-                        <p>Technologies : { project.Technologies}</p>
+                        <p>Technologies : {project.Technologies.map(t =><span>{t}, </span>
+                        )}</p>
                         <button className="btn btn-outline-primary me-2 mt-2" onClick={()=>navigate(`/project/${project.id}`)}>Details</button>
                     </Col>
                 </Row>
